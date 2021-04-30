@@ -58,12 +58,10 @@ string Account::getMail() const {
 istream& operator>>(istream& is, Account& a) {
 	int ac, c;
 	string str;
-	is >> ac;
+	is >> ac >> c >> str;
 	a.setAccuontNumber(ac);
-	is >> c;
 	a.setCode(c);
 	a.setBalance(0);
-	is >> str;
 	a.setMail(str);
 	return is;
 }
